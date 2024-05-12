@@ -12,12 +12,12 @@ export const headerLinks = [
     to: '/',
   },
   {
-    label: 'Create ',
+    label: 'Create Hotel ',
     to: '/create-hotel',
   },
   {
-    label: 'My Profile',
-    to: '/profile',
+    label: 'My Hotel',
+    to: '/my-hotel',
   },
 ]
 
