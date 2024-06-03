@@ -6,6 +6,7 @@ import { BrowserRouter as Router } from 'react-router-dom'
 import ToasterProvider from './components/ToasterProvider.tsx'
 import { AppContextProvider } from './context/AppContext.tsx'
 import { QueryClient, QueryClientProvider } from 'react-query'
+import { SearchContextProvider } from './context/SearchContext.tsx'
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -21,8 +22,10 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
      <QueryClientProvider client={queryClient}>
       <Router>
         <AppContextProvider>
-          <App />
-          <ToasterProvider />
+          <SearchContextProvider>
+            <App />
+            <ToasterProvider />
+          </SearchContextProvider>
         </AppContextProvider>
       </Router>
      </QueryClientProvider>

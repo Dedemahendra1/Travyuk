@@ -16,7 +16,7 @@ const Hero = () => {
             .
           </h1>
           <p className='mt-6 text-lg max-w-prose text-muted-foreground'>
-            Welcome to Travyuk. Enjoy Your Tour With Heavenly
+            Welcome to Travyuk. Enjoy Your Tour and Hotels With Heavenly
             experience you've never had
           </p>
           <div className='flex flex-col sm:flex-row gap-4 mt-6'>
