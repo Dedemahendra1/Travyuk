@@ -7,6 +7,7 @@ import CreateHotelPage from "./pages/CreateHotelPage"
 import MyHotels from "./pages/MyHotels"
 import EditHotel from "./pages/EditHotel"
 import SearchPage from "./pages/SearchPage"
+import Detail from "./pages/Detail"
 
 
 
@@ -19,6 +20,7 @@ const App = () => {
           <Route path="/register" element={<Layout showHero={false} showSearchBar={false}><Register /></Layout>} />
           <Route path="/sign-in" element={<Layout showHero={false} showSearchBar={false}><SignIn /></Layout>} />
           <Route path="/search" element={<Layout showHero={false} showSearchBar={true}><SearchPage/></Layout>} />
+          <Route path="/detail/:hotelId" element=<Layout showHero={false} showSearchBar={false}><Detail/></Layout>/>
           {isLoggedIn && (
             <>
               <Route path="/create-hotel" element={<Layout showHero={false} showSearchBar={false}><CreateHotelPage/></Layout>} />

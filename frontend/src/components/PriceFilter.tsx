@@ -19,8 +19,8 @@ type Props = {
         }
       >
         <option value="">Select Max Price</option>
-        {arrayPrice.map((price) => (
-          <option value={price}>{price}</option>
+        {arrayPrice.map((price, index) => (
+          <option key={index} value={price}>{price}</option>
         ))}
       </select>
     </div>
