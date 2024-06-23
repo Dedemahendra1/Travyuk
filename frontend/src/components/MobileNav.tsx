@@ -19,6 +19,10 @@ export const headerLinks = [
     label: 'My Hotel',
     to: '/my-hotel',
   },
+  {
+    label: 'My Reservation',
+    to: '/my-reservation',
+  },
 ]
 
 
