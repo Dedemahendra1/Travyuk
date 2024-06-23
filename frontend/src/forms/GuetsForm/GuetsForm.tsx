@@ -73,15 +73,15 @@ const GuetsForm = ({hotelId, pricePerNight}: Props) => {
   };
 
   return (
-    <div className="bg-white rounded-xl border border-neutral-200 overflow-hidden">
-      <div className="flex flex-row items-center gap-1 p-4">
+    <div className="bg-white rounded-xl border border-neutral-200 overflow-hidden shadow-lg">
+      <div className="flex flex-row items-center gap-1 p-4 bg-blue-50">
         <div className="text-2xl font-semibold">
           ${pricePerNight} /
           <span className="ml-1 text-xl font-semibold text-neutral-500">Night</span>
         </div>
       </div>
       <Separator className="border-neutral-200" />
-      <form         
+      <form 
       onSubmit={
           isLoggedIn ? handleSubmit(onSubmit) : handleSubmit(onSignInClick)
         }>
@@ -97,7 +97,7 @@ const GuetsForm = ({hotelId, pricePerNight}: Props) => {
               minDate={minDate}
               maxDate={maxDate}
               placeholderText="Check-in Date"
-              className="w-full p-2 bg-white border border-neutral-200 rounded focus:outline-none focus:ring focus:ring-blue-500"
+              className="w-full p-2 bg-white border border-neutral-200 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
               wrapperClassName="w-full"
             />
           </div>
@@ -105,20 +105,20 @@ const GuetsForm = ({hotelId, pricePerNight}: Props) => {
             <DatePicker
               required
               selected={checkOut}
-              onChange={(date) => setValue("checkOut", date as Date)}
-              selectsStart
+              onChange={(date) => setValue('checkOut', date as Date)}
+              selectsEnd
               startDate={checkIn}
               endDate={checkOut}
-              minDate={minDate}
+              minDate={checkIn}
               maxDate={maxDate}
               placeholderText="Check-out Date"
-              className="w-full p-2 bg-white border border-neutral-200 rounded focus:outline-none focus:ring focus:ring-blue-500"
+              className="w-full p-2 bg-white border border-neutral-200 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
               wrapperClassName="w-full"
             />
           </div>
 
-          <div className="flex items-center gap-4 border rounded-sm">
-            <div className="flex items-center flex-1 ml-1">
+          <div className="flex items-center gap-4 border rounded-sm p-2 bg-blue-50">
+            <div className="flex items-center flex-1">
               <Label htmlFor="adult" className="flex items-center gap-1">
                 <BsFillPersonFill />
                 Adult:
@@ -128,13 +128,10 @@ const GuetsForm = ({hotelId, pricePerNight}: Props) => {
                 id="adult"
                 min={1}
                 max={20}
-                className="w-full bg-transparent border-0 focus-visible:ring-offset-0 focus-visible:ring-0"
-                {...register("adultCount", {
-                  required: "This field is required",
-                  min: {
-                    value: 1,
-                    message: "There must be at least one adult",
-                  },
+                className="w-full bg-transparent border-0 focus:ring-0"
+                {...register('adultCount', {
+                  required: 'This field is required',
+                  min: { value: 1, message: 'There must be at least one adult' },
                   valueAsNumber: true,
                 })}
               />
@@ -149,8 +146,8 @@ const GuetsForm = ({hotelId, pricePerNight}: Props) => {
                 id="child"
                 min={0}
                 max={20}
-                className="w-full bg-transparent border-0 focus-visible:ring-offset-0 focus-visible:ring-0"
-                {...register("childCount", {
+                className="w-full bg-transparent border-0 focus:ring-0"
+                {...register('childCount', {
                   valueAsNumber: true,
                 })}
               />
@@ -162,16 +159,17 @@ const GuetsForm = ({hotelId, pricePerNight}: Props) => {
             )}
           </div>
 
+          <div className="flex justify-end">
             {isLoggedIn ? (
-              <Button>
+              <Button type="submit" className="bg-blue-600 text-white p-2 font-bold hover:bg-blue-500 text-md disabled:bg-gray-500">
                 Booking Now
               </Button>
             ) : (
-              <Button>
+              <Button type="submit" className="bg-blue-600 text-white p-2 font-bold hover:bg-blue-500 text-md disabled:bg-gray-500">
                 Sign In First
               </Button>
-            )
-            }
+            )}
+          </div>
         </div>
       </form>
     </div>

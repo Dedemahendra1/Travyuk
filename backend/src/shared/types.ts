@@ -45,4 +45,10 @@ export type UserType = {
       pages: number;
     };
   };
+
+  export type PaymentIntentResponse = {
+    paymentIntentId: string;
+    clientSecret: string;
+    totalCost: number;
+  };
   

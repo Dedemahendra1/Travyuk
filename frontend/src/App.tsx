@@ -8,6 +8,7 @@ import MyHotels from "./pages/MyHotels"
 import EditHotel from "./pages/EditHotel"
 import SearchPage from "./pages/SearchPage"
 import Detail from "./pages/Detail"
+import Booking from "./pages/Booking"
 
 
 
@@ -26,6 +27,7 @@ const App = () => {
               <Route path="/create-hotel" element={<Layout showHero={false} showSearchBar={false}><CreateHotelPage/></Layout>} />
               <Route path="/my-hotel" element={<Layout showHero={false} showSearchBar={false}><MyHotels/></Layout>} />
               <Route path="/edit-hotel/:hotelId" element={<Layout showHero={false} showSearchBar={false}><EditHotel/></Layout>} />
+              <Route path="/hotel/:hotelId/booking" element={<Layout showHero={false} showSearchBar={false}><Booking/></Layout>} />
             </>
           )}
         </Routes>
