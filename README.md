@@ -1,17 +1,35 @@
 # Travyuk
 
-A brief description of what your project does and its purpose.
-
 ## Project Description
-Describe your project in detail. Explain its purpose, what problem it solves, and any other relevant information.
+Travyuk is a comprehensive hotel booking application designed to make travel planning seamless and efficient. It caters to travelers looking for a convenient and user-friendly platform to search for hotels, view detailed information, and make secure reservations. Travyuk aims to simplify the entire booking process, ensuring that users can easily find and book accommodations that meet their needs and preferences.
 
 ## Features
+### Hotel Search and Filtering:
+* Users can search for hotels based on various criteria, including location, check-in and check-out dates, number of guests, and more.
+* Advanced filtering options allow users to narrow down search results to find the perfect accommodation.
+
+### Detailed Hotel Information:
+* Each hotel listing provides comprehensive details, including amenities, room types, pricing, and high-quality images.
+* Users can read detailed descriptions and reviews to make informed decisions.
+
+### Booking and Reservation Management:
+* Secure booking process with real-time availability checks.
+* Personalized user profiles for managing bookings and preferences.
+
+## Purpose and Goals:
+The primary goal of Travyuk is to provide a hassle-free booking experience for travelers. By offering a comprehensive set of features and an intuitive interface, Travyuk aims to:
+* Enhance the overall travel planning process by making it easier to find and book hotels.
+* Provide detailed and accurate information to help users make informed decisions.
+* Ensure a secure and reliable booking platform for users to trust with their travel plans.
+* Cater to a wide range of users, from casual travelers to business professionals, by offering customizable search and booking options.
+With Travyuk, users can look forward to a streamlined and enjoyable travel booking experience, making their journey more memorable and stress-free.
 
 ## Tech Stack
 ### Frontend
 * React
 * Tailwind CSS
 * Vite.js
+* Shadcn/Ui
 ### Backend
 * Node.js
 * Express
