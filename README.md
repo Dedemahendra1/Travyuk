@@ -10,10 +10,10 @@ Travyuk is a comprehensive hotel booking application designed to make travel pla
 
 ### Detailed Hotel Information:
 * Each hotel listing provides comprehensive details, including amenities, room types, pricing, and high-quality images.
-* Users can read detailed descriptions and reviews to make informed decisions.
+* Users can read detailed descriptions to make informed decisions.
 
 ### Booking and Reservation Management:
-* Secure booking process with real-time availability checks.
+* Payment booking process with Stripe.
 * Personalized user profiles for managing bookings and preferences.
 
 ## Purpose and Goals:
